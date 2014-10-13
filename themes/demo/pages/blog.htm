@@ -1,0 +1,26 @@
+title = "Blog"
+url = "/blog"
+layout = "default"
+description = "This is the main blog page"
+hidden = "0"
+
+[blogPosts]
+pageParam = ":page"
+postsPerPage = "10"
+noPostsMessage = "No posts found"
+categoryPage = "blog/category"
+postPage = "blog/post"
+
+[blogCategories]
+idParam = ":slug"
+displayEmpty = "0"
+categoryPage = "blog/category"
+==
+<div class="row">
+    <div class="col-sm-8">
+        {% component 'blogPosts' %}
+    </div>
+    <div class="col-sm-4">
+        {% component 'blogCategories' %}
+    </div>
+</div>

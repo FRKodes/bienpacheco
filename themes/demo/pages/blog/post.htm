@@ -1,0 +1,17 @@
+title = "Blog Post"
+url = "/blog/post/:slug"
+layout = "default"
+description = "the simple page blog post"
+hidden = "0"
+
+[blogPost]
+idParam = ":slug"
+categoryPage = "blog/category"
+==
+<?php
+function onEnd(){
+    $this->page->title = $this['post']->title;
+}
+?>
+==
+{% component 'blogPost' %}
