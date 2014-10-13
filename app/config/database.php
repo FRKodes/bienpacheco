@@ -1,12 +1,5 @@
 <?php
 
-$url=parse_url("mysql://b3490830e42548:61befbce@us-cdbr-iron-east-01.cleardb.net/heroku_786efd62a3afc7d?reconnect=true");
-
-    $_ENV('DB_URL') 		= $url["host"];
-    $_ENV('DB_USERNAME') 	= $url["user"];
-    $_ENV('DB_PASSWORD') 	= $url["pass"];
-    $_ENV('DB_NAME') 		= substr($url["path"],1);
-
 return array(
 
 	/*
