@@ -1,9 +1,4 @@
 <?php
-$url=parse_url(getenv("DATABASE_URL"));
-putenv('DB_URL') 		= $url["host"];
-putenv('DB_USERNAME') 	= $url["user"];
-putenv('DB_PASSWORD') 	= $url["pass"];
-putenv('DB_NAME') 		= substr($url["path"],1);
 
 return array(
 
