@@ -1,5 +1,12 @@
 <?php
 
+$url=parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+    $_ENV('DB_URL') 		= $url["host"];
+    $_ENV('DB_USERNAME') 	= $url["user"];
+    $_ENV('DB_PASSWORD') 	= $url["pass"];
+    $_ENV('DB_NAME') 		= substr($url["path"],1);
+
 return array(
 
 	/*
